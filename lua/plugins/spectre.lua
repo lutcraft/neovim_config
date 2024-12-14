@@ -1,3 +1,21 @@
+
+require('spectre').setup({
+    color_devicons = true,
+    live_update = false, -- auto execute search again when you write to any file in vim
+    line_sep_start = '┌-----------------------------------------',
+    result_padding = '¦  ',
+    line_sep       = '└-----------------------------------------',
+    highlight = {
+        ui = "Number",
+        search = "String",
+        replace = "Error"
+    },
+    is_block_ui_break = true,
+})
+
+
+
+
 vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {
     desc = "Toggle Spectre"
 })
